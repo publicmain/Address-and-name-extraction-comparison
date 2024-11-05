@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        select, input[type="file"], input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        #progress-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            width: 0%;
+            height: 20px;
+            background-color: #5cb85c;
+            border-radius: 5px;
+            transition: width 0.4s;
+        }
+
+        #result-container {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            white-space: pre-wrap;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+        }
+
+        .result-item span {
+            font-weight: bold;
+        }
+
+        #file-upload-form, #name-comparison-form, #idcard-name-comparison-form, #main-form {
+            display: none;
+        }
+
+        #key-validation-form {
+            display: block;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function validateKey(event) {
+            event.preventDefault();
+            const key = document.getElementById('keyInput').value;
+            const xhr = new XMLHttpRequest();
+            const URL = '/validate-key';
+            xhr.open("POST", URL, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    const status = xhr.status;
+                    if (status === 0 || (status >= 200 && status < 400)) {
+                        const response = JSON.parse(xhr.responseText);
+                        if (response.status === "success") {
+                            document.getElementById('key-validation-form').style.display = 'none';
+                            document.getElementById('main-form').style.display = 'block';
+                        } else {
+                            displayResult({error: 'Invalid key. Please try again.'});
+                        }
+                    } else {
+                        displayResult({error: 'Error: ' + xhr.responseText});
+                    }
+                }
+            };
+
+            xhr.send(JSON.stringify({ key: key }));
+        }
+
+        function convertToBase64(file, callback) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                callback(reader.result.split(',')[1]);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function uploadFile(event) {
+            event.preventDefault();
+            const selectedAPI = document.getElementById('api-selection').value;
+            const progressContainer = document.getElementById('progress-container');
+            const progressBar = document.getElementById('progress-bar');
+            progressContainer.style.display = 'block';
+            progressBar.style.width = '0%';
+
+            const fileInput = document.getElementById('file');
+            const file = fileInput.files[0];
+
+            if (!file && selectedAPI !== 'name-compare') {
+                displayResult({error: 'Please select a file!'});
+                return;
+            }
+
+            if (selectedAPI === 'name-compare') {
+                const xhr = new XMLHttpRequest();
+                const URL = '/ocr/name_compare';
+                xhr.open("POST", URL, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+
+                xhr.upload.onprogress = (event) => {
+                    if (event.lengthComputable) {
+                        const percentComplete = (event.loaded / event.total) * 100;
+                        progressBar.style.width = percentComplete + '%';
+                    }
+                };
+
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        const status = xhr.status;
+                        if (status === 0 || (status >= 200 && status < 400)) {
+                            const response = JSON.parse(xhr.responseText);
+                            displayResult(response);
+                        } else {
+                            displayResult({error: xhr.responseText});
+                        }
+                        progressContainer.style.display = 'none';
+                    }
+                };
+
+                const payload = {
+                    name1: document.getElementById('name1').value,
+                    name2: document.getElementById('name2').value,
+                    language: document.getElementById('language').value,
+                    session_id: "your_session_id", 
+                    idKey: "your_id_key", 
+                    request: "your_request_type" 
+                };
+
+                xhr.send(JSON.stringify(payload));
+            } else {
+                convertToBase64(file, (base64String) => {
+                    const xhr = new XMLHttpRequest();
+                    let URL = '';
+                    switch (selectedAPI) {
+                        case 'ocr-extract':
+                            URL = '/ocr/address_extract';
+                            break;
+                        case 'ocr-result':
+                            URL = '/ocr/ocr_result';
+                            break;
+                        case 'idcard-name-compare':
+                            URL = '/ocr/ocrName_textName_compare';
+                            break;
+                        case 'id-card-name-address':
+                            URL = '/ocr/id_card_name_address';
+                            break;
+                    }
+
+                    xhr.open("POST", URL, true);
+                    xhr.setRequestHeader("Content-Type", "application/json");
+
+                    xhr.upload.onprogress = (event) => {
+                        if (event.lengthComputable) {
+                            const percentComplete = (event.loaded / event.total) * 100;
+                            progressBar.style.width = percentComplete + '%';
+                        }
+                    };
+
+                    xhr.onreadystatechange = () => {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            const status = xhr.status;
+                            if (status === 0 || (status >= 200 && status < 400)) {
+                                const response = JSON.parse(xhr.responseText);
+                                displayResult(response);
+                            } else {
+                                displayResult({error: xhr.responseText});
+                            }
+                            progressContainer.style.display = 'none';
+                        }
+                    };
+
+                    const payload = {
+                        filestream: base64String,
+                        URL: '',
+                        session_id: "your_session_id", 
+                        idKey: "your_id_key", 
+                        request: "your_request_type" 
+                    };
+
+                    if (selectedAPI === 'idcard-name-compare') {
+                        payload.name = document.getElementById('idcard-name').value;
+                    }
+
+                    xhr.send(JSON.stringify(payload));
+                });
+            }
+        }
+
+        function displayResult(response) {
+            const resultContainer = document.getElementById('result');
+            const resultTitle = document.getElementById('result-title');
+            resultContainer.innerHTML = '';
+
+            if (response.error) {
+                resultTitle.innerText = 'Error:';
+                resultContainer.innerHTML = `<div class="result-item">${response.error}</div>`;
+            } else {
+                resultTitle.innerText = 'Result:';
+                for (const key in response) {
+                    if (response.hasOwnProperty(key)) {
+                        const item = document.createElement('div');
+                        item.className = 'result-item';
+                        item.innerHTML = `<span>${key}:</span> ${response[key]}`;
+                        resultContainer.appendChild(item);
+                    }
+                }
+            }
+        }
+
+        function toggleForm() {
+            const selectedAPI = document.getElementById('api-selection').value;
+            const fileUploadForm = document.getElementById('file-upload-form');
+            const nameComparisonForm = document.getElementById('name-comparison-form');
+            const idcardNameComparisonForm = document.getElementById('idcard-name-comparison-form');
+
+            if (selectedAPI === 'ocr-extract' || selectedAPI === 'ocr-result' || selectedAPI === 'idcard-name-compare' || selectedAPI === 'id-card-name-address') {
+                fileUploadForm.style.display = 'block';
+                nameComparisonForm.style.display = 'none';
+                idcardNameComparisonForm.style.display = selectedAPI === 'idcard-name-compare' ? 'block' : 'none';
+            } else if (selectedAPI === 'name-compare') {
+                fileUploadForm.style.display = 'none';
+                nameComparisonForm.style.display = 'block';
+                idcardNameComparisonForm.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>OCR Extractor</h1>
+    <form id="key-validation-form" onsubmit="validateKey(event)">
+        <label for="keyInput">请输入校验Key:</label>
+        <input type="text" id="keyInput" name="key" required>
+        <button type="submit">提交</button>
+    </form>
+
+    <form id="main-form" onsubmit="uploadFile(event)">
+        <label for="api-selection">Select API:</label>
+        <select id="api-selection" onchange="toggleForm()">
+            <option >please select one option</option>
+            <option value="ocr-extract">Address Extract</option>
+            <option value="ocr-result">OCR Result</option>
+            <option value="name-compare">Name Compare</option>
+            <option value="idcard-name-compare">ID Card Name Compare</option>
+            <option value="id-card-name-address">ID Card Name Address</option>
+        </select>
+        <div id="file-upload-form">
+            <label for="file">Choose file to upload:</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div id="name-comparison-form">
+            <label for="name1">Name 1:</label>
+            <input type="text" id="name1" name="name1">
+            <br>
+            <label for="name2">Name 2:</label>
+            <input type="text" id="name2" name="name2">
+            <br>
+            <label for="language">Language:</label>
+            <select id="language" name="language">
+                <option value="english">others</option>
+                <option value="chinese_pinyin">Chinese_pinyin</option>
+            </select>
+        </div>
+        <div id="idcard-name-comparison-form">
+            <label for="idcard-name">Name:</label>
+            <input type="text" id="idcard-name" name="name">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <h2 id="result-title">Result:</h2>
+    <div id="result-container">
+        <div id="result"></div>
+    </div>
+</body>
+</html>

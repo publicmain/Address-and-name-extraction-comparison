@@ -1,0 +1,98 @@
+2024-05-31 12:00:41,020 - __main__ - DEBUG - 这是一个调试日志
+2024-05-31 12:00:41,020 - __main__ - INFO - 这是一个信息日志
+2024-05-31 12:00:41,020 - __main__ - WARNING - 这是一个警告日志
+2024-05-31 12:00:41,020 - __main__ - ERROR - 这是一个错误日志
+2024-05-31 12:00:41,020 - __main__ - CRITICAL - 这是一个严重错误日志
+2024-05-31 12:00:41,022 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-05-31 12:00:41,953 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/auth/v3/tenant_access_token/internal HTTP/1.1" 200 102
+2024-05-31 12:00:41,956 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:00:42,022 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/address01.txt HTTP/1.1" 200 44
+2024-05-31 12:00:42,023 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:00:42,026 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/address01.txt HTTP/1.1" 200 44
+2024-05-31 12:00:42,027 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:00:42,033 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/image06.pdf HTTP/1.1" 200 199536
+2024-05-31 12:00:42,036 - werkzeug - INFO - 192.168.180.230 - - [31/May/2024 12:00:42] "[35m[1mPOST /ocr/extract HTTP/1.1[0m" 500 -
+2024-05-31 12:03:47,614 - werkzeug - INFO -  * Detected change in '/home/app/.local/lib/python3.9/site-packages/fitz/__init__.py', reloading
+2024-05-31 12:04:05,348 - __main__ - DEBUG - 这是一个调试日志
+2024-05-31 12:04:05,348 - __main__ - INFO - 这是一个信息日志
+2024-05-31 12:04:05,348 - __main__ - WARNING - 这是一个警告日志
+2024-05-31 12:04:05,348 - __main__ - ERROR - 这是一个错误日志
+2024-05-31 12:04:05,348 - __main__ - CRITICAL - 这是一个严重错误日志
+2024-05-31 12:04:05,351 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-05-31 12:04:05,991 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/auth/v3/tenant_access_token/internal HTTP/1.1" 200 102
+2024-05-31 12:04:05,994 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:04:05,995 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/address01.txt HTTP/1.1" 200 44
+2024-05-31 12:04:05,997 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:04:05,998 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/address01.txt HTTP/1.1" 200 44
+2024-05-31 12:04:06,000 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:04:06,002 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/image06.pdf HTTP/1.1" 200 199536
+2024-05-31 12:04:06,241 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-05-31 12:04:08,253 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/optical_char_recognition/v1/image/basic_recognize HTTP/1.1" 200 756
+2024-05-31 12:04:08,259 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-05-31 12:04:10,109 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/optical_char_recognition/v1/image/basic_recognize HTTP/1.1" 200 362
+2024-05-31 12:04:10,113 - werkzeug - INFO - 192.168.180.230 - - [31/May/2024 12:04:10] "[37mPOST /ocr/extract HTTP/1.1[0m" 200 -
+2024-05-31 12:06:47,268 - __main__ - DEBUG - 这是一个调试日志
+2024-05-31 12:06:47,268 - __main__ - INFO - 这是一个信息日志
+2024-05-31 12:06:47,268 - __main__ - WARNING - 这是一个警告日志
+2024-05-31 12:06:47,268 - __main__ - ERROR - 这是一个错误日志
+2024-05-31 12:06:47,268 - __main__ - CRITICAL - 这是一个严重错误日志
+2024-05-31 12:06:47,269 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-05-31 12:06:48,173 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/auth/v3/tenant_access_token/internal HTTP/1.1" 200 102
+2024-05-31 12:06:48,176 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:06:48,179 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/address06.txt HTTP/1.1" 200 26
+2024-05-31 12:06:48,181 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:06:48,183 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/address06.txt HTTP/1.1" 200 26
+2024-05-31 12:06:48,184 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-05-31 12:06:48,187 - urllib3.connectionpool - DEBUG - http://172.16.133.3:80 "GET /images/image06.pdf HTTP/1.1" 200 199536
+2024-05-31 12:06:48,281 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-05-31 12:06:49,662 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/optical_char_recognition/v1/image/basic_recognize HTTP/1.1" 200 756
+2024-05-31 12:06:49,666 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-05-31 12:06:51,698 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/optical_char_recognition/v1/image/basic_recognize HTTP/1.1" 200 362
+2024-05-31 12:06:51,701 - werkzeug - INFO - 192.168.180.230 - - [31/May/2024 12:06:51] "[37mPOST /ocr/extract HTTP/1.1[0m" 200 -
+2024-06-05 11:40:05,165 - __main__ - DEBUG - 这是一个调试日志
+2024-06-05 11:40:05,165 - __main__ - INFO - 这是一个信息日志
+2024-06-05 11:40:05,165 - __main__ - WARNING - 这是一个警告日志
+2024-06-05 11:40:05,166 - __main__ - ERROR - 这是一个错误日志
+2024-06-05 11:40:05,166 - __main__ - CRITICAL - 这是一个严重错误日志
+2024-06-05 11:40:05,169 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-06-05 11:40:33,310 - werkzeug - INFO - 192.168.180.230 - - [05/Jun/2024 11:40:33] "[35m[1mPOST /ocr/extract HTTP/1.1[0m" 500 -
+2024-06-05 11:42:12,406 - __main__ - DEBUG - 这是一个调试日志
+2024-06-05 11:42:12,407 - __main__ - INFO - 这是一个信息日志
+2024-06-05 11:42:12,407 - __main__ - WARNING - 这是一个警告日志
+2024-06-05 11:42:12,407 - __main__ - ERROR - 这是一个错误日志
+2024-06-05 11:42:12,407 - __main__ - CRITICAL - 这是一个严重错误日志
+2024-06-05 11:42:12,408 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-06-05 11:42:40,457 - werkzeug - INFO - 192.168.180.230 - - [05/Jun/2024 11:42:40] "[35m[1mPOST /ocr/extract HTTP/1.1[0m" 500 -
+2024-06-20 17:27:44,008 - __main__ - DEBUG - 这是一个调试日志
+2024-06-20 17:27:44,008 - __main__ - INFO - 这是一个信息日志
+2024-06-20 17:27:44,008 - __main__ - WARNING - 这是一个警告日志
+2024-06-20 17:27:44,008 - __main__ - ERROR - 这是一个错误日志
+2024-06-20 17:27:44,008 - __main__ - CRITICAL - 这是一个严重错误日志
+2024-06-20 17:27:44,011 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-06-20 17:27:44,986 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/auth/v3/tenant_access_token/internal HTTP/1.1" 200 102
+2024-06-20 17:27:44,989 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-06-20 17:29:54,658 - werkzeug - INFO - 192.168.180.230 - - [20/Jun/2024 17:29:54] "[35m[1mPOST /ocr/extract HTTP/1.1[0m" 500 -
+2024-06-20 17:31:00,684 - __main__ - DEBUG - 这是一个调试日志
+2024-06-20 17:31:00,684 - __main__ - INFO - 这是一个信息日志
+2024-06-20 17:31:00,684 - __main__ - WARNING - 这是一个警告日志
+2024-06-20 17:31:00,684 - __main__ - ERROR - 这是一个错误日志
+2024-06-20 17:31:00,684 - __main__ - CRITICAL - 这是一个严重错误日志
+2024-06-20 17:31:00,686 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-06-20 17:31:01,282 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/auth/v3/tenant_access_token/internal HTTP/1.1" 200 102
+2024-06-20 17:31:01,285 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-06-20 17:33:11,199 - werkzeug - INFO - 192.168.180.230 - - [20/Jun/2024 17:33:11] "[35m[1mPOST /ocr/extract HTTP/1.1[0m" 500 -
+2024-06-20 17:35:08,141 - __main__ - DEBUG - 这是一个调试日志
+2024-06-20 17:35:08,141 - __main__ - INFO - 这是一个信息日志
+2024-06-20 17:35:08,141 - __main__ - WARNING - 这是一个警告日志
+2024-06-20 17:35:08,142 - __main__ - ERROR - 这是一个错误日志
+2024-06-20 17:35:08,142 - __main__ - CRITICAL - 这是一个严重错误日志
+2024-06-20 17:35:08,143 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-06-20 17:35:08,686 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/auth/v3/tenant_access_token/internal HTTP/1.1" 200 102
+2024-06-20 17:35:08,688 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 172.16.133.3:80
+2024-06-20 17:37:19,010 - werkzeug - INFO - 192.168.180.230 - - [20/Jun/2024 17:37:19] "[35m[1mPOST /ocr/extract HTTP/1.1[0m" 500 -
+2024-06-26 15:58:14,681 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-06-26 15:58:15,306 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/auth/v3/tenant_access_token/internal HTTP/1.1" 200 102
+2024-06-26 15:58:15,353 - werkzeug - INFO - 172.16.31.5 - - [26/Jun/2024 15:58:15] "[35m[1mPOST /ocr/extract HTTP/1.1[0m" 500 -
+2024-06-26 16:07:20,879 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.larksuite.com:443
+2024-06-26 16:07:21,473 - urllib3.connectionpool - DEBUG - https://open.larksuite.com:443 "POST /open-apis/auth/v3/tenant_access_token/internal HTTP/1.1" 200 102
+2024-06-26 16:07:21,486 - werkzeug - INFO - 172.16.31.5 - - [26/Jun/2024 16:07:21] "[35m[1mPOST /ocr/extract HTTP/1.1[0m" 500 -
