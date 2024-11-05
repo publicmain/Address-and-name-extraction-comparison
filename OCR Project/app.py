@@ -1,13 +1,14 @@
-from process_util import output_from_ocr,is_idCard
 from name_util import find_closest_name,chinese_name_from_ocr,remove_title_prefix
 from address_util import estimate_language_proportion,extract_address_id
 from gpt import openai,openai_extract_name, openai_translate_to_english
-from similarity import compare_names
 from flask import Flask, request, jsonify,render_template
+from process_util import output_from_ocr,is_idCard
 from logging.handlers import RotatingFileHandler
 from ocr_util import get_tenant_access_token
 from decimal import Decimal, ROUND_HALF_UP
 from config import app_id, app_secret
+from similarity import compare_names
+from difflib import SequenceMatcher
 from serialNo import get_serialNo
 import logging
 import config
@@ -110,6 +111,40 @@ def ocr_result():
         "name_result": "",
         "real_address": "",
         "address_result":"",
+        "output_name_from_URL":"",
+        "real_name":"",
+        "output_postal_from_URL":"",
+        "output_address_from_URL":""
+    }), 200
+
+@app.route('/ocr/address_compare', methods=['POST'])
+def address_compare():
+    logger.info('--------------------------address_compare start--------------------------')
+    data = request.json
+    logger.info(f'request details for address_compare: {data}')
+    if not data or 'address1' not in data or 'address2' not in data:
+        logger.error('Missing parameters in /ocr/address_compare request')
+        return jsonify({"error": "缺少必要参数: address1 或 address2"}), 400
+    address1 = data['address1']
+    address2 = data['address2']
+    session_id = data.get('session_id', '')
+    id_key = data.get('idKey', '')
+    request_type = data.get('request', '')
+    serialNo = get_serialNo()
+    logger.info(f'Comparing addresss: {address1} and {address2}')
+    # def contains_chinese(text):
+    #     return re.search(r'[\u4e00-\u9fff]', text) is not None
+    similarity = SequenceMatcher(None, address1, address2).ratio()
+    similarity = Decimal(similarity)
+    similarity = similarity.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
+    logger.info(f'address comparison result: {similarity}%')
+    return jsonify({
+        "session_id": session_id,
+        "idKey": id_key,
+        "request": request_type,
+        "address_result": str(similarity) + "%",
+        "serialNo":serialNo,
+        "real_address":"",
         "output_name_from_URL":"",
         "real_name":"",
         "output_postal_from_URL":"",

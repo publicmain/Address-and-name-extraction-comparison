@@ -80,7 +80,7 @@
             font-weight: bold;
         }
 
-        #file-upload-form, #name-comparison-form, #idcard-name-comparison-form, #main-form {
+        #file-upload-form, #name-comparison-form, #address-comparison-form, #idcard-name-comparison-form, #main-form {
             display: none;
         }
 
@@ -140,7 +140,7 @@
             const fileInput = document.getElementById('file');
             const file = fileInput.files[0];
 
-            if (!file && selectedAPI !== 'name-compare') {
+            if (!file && selectedAPI !== 'name-compare' && selectedAPI !== 'address-compare') {
                 displayResult({error: 'Please select a file!'});
                 return;
             }
@@ -175,6 +175,41 @@
                     name1: document.getElementById('name1').value,
                     name2: document.getElementById('name2').value,
                     language: document.getElementById('language').value,
+                    session_id: "your_session_id", 
+                    idKey: "your_id_key", 
+                    request: "your_request_type" 
+                };
+
+                xhr.send(JSON.stringify(payload));
+            } else if (selectedAPI === 'address-compare') {
+                const xhr = new XMLHttpRequest();
+                const URL = '/ocr/address_compare';
+                xhr.open("POST", URL, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+
+                xhr.upload.onprogress = (event) => {
+                    if (event.lengthComputable) {
+                        const percentComplete = (event.loaded / event.total) * 100;
+                        progressBar.style.width = percentComplete + '%';
+                    }
+                };
+
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        const status = xhr.status;
+                        if (status === 0 || (status >= 200 && status < 400)) {
+                            const response = JSON.parse(xhr.responseText);
+                            displayResult(response);
+                        } else {
+                            displayResult({error: xhr.responseText});
+                        }
+                        progressContainer.style.display = 'none';
+                    }
+                };
+
+                const payload = {
+                    address1: document.getElementById('address1').value,
+                    address2: document.getElementById('address2').value,
                     session_id: "your_session_id", 
                     idKey: "your_id_key", 
                     request: "your_request_type" 
@@ -265,15 +300,23 @@
             const selectedAPI = document.getElementById('api-selection').value;
             const fileUploadForm = document.getElementById('file-upload-form');
             const nameComparisonForm = document.getElementById('name-comparison-form');
+            const addressComparisonForm = document.getElementById('address-comparison-form');
             const idcardNameComparisonForm = document.getElementById('idcard-name-comparison-form');
 
             if (selectedAPI === 'ocr-extract' || selectedAPI === 'ocr-result' || selectedAPI === 'idcard-name-compare' || selectedAPI === 'id-card-name-address') {
                 fileUploadForm.style.display = 'block';
                 nameComparisonForm.style.display = 'none';
+                addressComparisonForm.style.display = 'none';
                 idcardNameComparisonForm.style.display = selectedAPI === 'idcard-name-compare' ? 'block' : 'none';
             } else if (selectedAPI === 'name-compare') {
                 fileUploadForm.style.display = 'none';
                 nameComparisonForm.style.display = 'block';
+                addressComparisonForm.style.display = 'none';
+                idcardNameComparisonForm.style.display = 'none';
+            } else if (selectedAPI === 'address-compare') {
+                fileUploadForm.style.display = 'none';
+                nameComparisonForm.style.display = 'none';
+                addressComparisonForm.style.display = 'block';
                 idcardNameComparisonForm.style.display = 'none';
             }
         }
@@ -290,10 +333,11 @@
     <form id="main-form" onsubmit="uploadFile(event)">
         <label for="api-selection">Select API:</label>
         <select id="api-selection" onchange="toggleForm()">
-            <option >please select one option</option>
+            <option>please select one option</option>
             <option value="ocr-extract">Address Extract</option>
             <option value="ocr-result">OCR Result</option>
             <option value="name-compare">Name Compare</option>
+            <option value="address-compare">Address Compare</option>
             <option value="idcard-name-compare">ID Card Name Compare</option>
             <option value="id-card-name-address">ID Card Name Address</option>
         </select>
@@ -313,6 +357,13 @@
                 <option value="english">others</option>
                 <option value="chinese_pinyin">Chinese_pinyin</option>
             </select>
+        </div>
+        <div id="address-comparison-form">
+            <label for="address1">Address 1:</label>
+            <input type="text" id="address1" name="address1">
+            <br>
+            <label for="address2">Address 2:</label>
+            <input type="text" id="address2" name="address2">
         </div>
         <div id="idcard-name-comparison-form">
             <label for="idcard-name">Name:</label>

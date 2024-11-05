@@ -83,3 +83,18 @@ def compare_chinese_pingyin_algo(pingyin1, pingyin2):
         result = get_name_max_similarity(pingyin1,pingyin2)
         return result
 
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from difflib import SequenceMatcher
+
+# Custom function to tokenize the address into components
+def custom_tokenizer(address):
+    return address.split(", ")
+
+# Sample addresses
+address1 = "Building 7, Unit 3, Rooshenuangfuliyangguangxiaoqu32312312ce"
+address2 = "Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province"
+
+# Check for a more sensitive string difference
+similarity = SequenceMatcher(None, address1, address2).ratio()
+

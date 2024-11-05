@@ -1,0 +1,113 @@
+2024-11-05 19:06:12,431 - __main__ - INFO - Index page accessed
+2024-11-05 19:06:12,521 - __main__ - INFO - Index page accessed
+2024-11-05 19:06:15,524 - __main__ - INFO - Key validation successful for key: G1h2I3j4K5l6M7n8O9p0Q1r2S3t4U5v6W7x8Y9z0
+2024-11-05 19:06:22,058 - __main__ - INFO - --------------------------name_compare start--------------------------
+2024-11-05 19:06:22,058 - __main__ - INFO - request details for name_compare: {'name1': 'rfaefadfa', 'name2': 'fsdfsgfdgsdffg', 'language': 'english', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 19:06:22,058 - __main__ - INFO - Comparing names: rfaefadfa and fsdfsgfdgsdffg
+2024-11-05 19:06:22,058 - __main__ - INFO - Name comparison result: 35.00%
+2024-11-05 20:01:12,929 - __main__ - INFO - Index page accessed
+2024-11-05 20:01:14,922 - __main__ - INFO - Key validation successful for key: G1h2I3j4K5l6M7n8O9p0Q1r2S3t4U5v6W7x8Y9z0
+2024-11-05 20:01:22,580 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:01:22,580 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:01:22,580 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:01:22,580 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:01:23,824 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:01:23,824 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:01:23,824 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:01:23,824 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:01:24,207 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:01:24,207 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:01:24,207 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:01:24,207 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:04:36,005 - __main__ - INFO - OCR result obtained from file: []
+2024-11-05 20:06:59,744 - __main__ - INFO - OCR result obtained from file: []
+2024-11-05 20:07:04,358 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:07:04,358 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:07:04,358 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:07:04,358 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:07:04,991 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:07:04,991 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:07:04,991 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:07:05,000 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:07:06,568 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:07:06,568 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:07:06,576 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:07:06,577 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:07:06,897 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:07:06,905 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:07:06,905 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:07:06,905 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:07:52,214 - __main__ - INFO - --------------------------name_compare start--------------------------
+2024-11-05 20:07:52,214 - __main__ - INFO - request details for name_compare: {'name1': 'Kexiang Yao', 'name2': 'Kexiang Yao', 'language': 'english', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:07:52,214 - __main__ - INFO - Comparing names: Kexiang Yao and Kexiang Yao
+2024-11-05 20:07:52,214 - __main__ - INFO - Name comparison result: 100.00%
+2024-11-05 20:07:56,941 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:07:56,950 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:07:56,950 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:07:56,950 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:08:21,091 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:21,091 - __main__ - INFO - request details for address_compare: {'address1': 'LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:21,091 - __main__ - INFO - Comparing addresss: LOT 5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and cLEMENTI wEST STREET 2
+2024-11-05 20:08:21,099 - __main__ - INFO - address comparison result: 0.10%
+2024-11-05 20:08:22,394 - __main__ - INFO - Index page accessed
+2024-11-05 20:08:25,177 - __main__ - INFO - Key validation successful for key: G1h2I3j4K5l6M7n8O9p0Q1r2S3t4U5v6W7x8Y9z0
+2024-11-05 20:08:28,502 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:28,503 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:28,503 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:08:28,504 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:08:30,996 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:30,996 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:30,996 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:08:30,996 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:08:31,417 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:31,417 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:31,417 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:08:31,417 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:08:31,694 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:31,694 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:31,694 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:08:31,694 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:08:31,993 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:31,993 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:31,993 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:08:31,993 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:08:32,258 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:32,258 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:32,258 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:08:32,258 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:08:32,397 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:32,397 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:32,397 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:08:32,397 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:08:32,530 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:08:32,530 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:08:32,539 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:08:32,539 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:11:01,242 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:11:01,242 - __main__ - INFO - request details for address_compare: {'address1': '723', 'address2': 'cLEMENTI wEST STREET 2', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:11:01,242 - __main__ - INFO - Comparing addresss: 723 and cLEMENTI wEST STREET 2
+2024-11-05 20:11:01,242 - __main__ - INFO - address comparison result: 0.08%
+2024-11-05 20:11:07,348 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:11:07,348 - __main__ - INFO - request details for address_compare: {'address1': 'LOT5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI', 'address2': 'JOHOR, 79200, MALAYSIA', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:11:07,348 - __main__ - INFO - Comparing addresss: LOT5 JALAN MEDINI UTARA 4, MEDINI ISKANDAR, ISKANDAR PUTERI and JOHOR, 79200, MALAYSIA
+2024-11-05 20:11:07,348 - __main__ - INFO - address comparison result: 0.17%
+2024-11-05 20:11:20,628 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:11:20,630 - __main__ - INFO - request details for address_compare: {'address1': 'Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province', 'address2': 'Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:11:20,631 - __main__ - INFO - Comparing addresss: Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province and Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province
+2024-11-05 20:11:20,632 - __main__ - INFO - address comparison result: 1.00%
+2024-11-05 20:11:23,518 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:11:23,518 - __main__ - INFO - request details for address_compare: {'address1': 'Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province', 'address2': 'Building 7, Unit 2, Room 203, Nature Community, Nt, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:11:23,518 - __main__ - INFO - Comparing addresss: Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province and Building 7, Unit 2, Room 203, Nature Community, Nt, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province
+2024-11-05 20:11:23,526 - __main__ - INFO - address comparison result: 0.93%
+2024-11-05 20:11:25,763 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:11:25,763 - __main__ - INFO - request details for address_compare: {'address1': 'Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province', 'address2': 'm 203, Nature Community, Nt, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:11:25,763 - __main__ - INFO - Comparing addresss: Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province and m 203, Nature Community, Nt, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province
+2024-11-05 20:11:25,771 - __main__ - INFO - address comparison result: 0.83%
+2024-11-05 20:11:30,392 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:11:30,400 - __main__ - INFO - request details for address_compare: {'address1': 'Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province', 'address2': 'm 203, Nature Community, Nt, North Second Ring Road, Wuhua District, Kunming City, Yunnnce', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:11:30,400 - __main__ - INFO - Comparing addresss: Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province and m 203, Nature Community, Nt, North Second Ring Road, Wuhua District, Kunming City, Yunnnce
+2024-11-05 20:11:30,400 - __main__ - INFO - address comparison result: 0.79%
+2024-11-05 20:11:32,488 - __main__ - INFO - --------------------------address_compare start--------------------------
+2024-11-05 20:11:32,488 - __main__ - INFO - request details for address_compare: {'address1': 'Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province', 'address2': 'm 203, Nature Community, Nt, North Second Ring Road, Wuhua Disunnnce', 'session_id': 'your_session_id', 'idKey': 'your_id_key', 'request': 'your_request_type'}
+2024-11-05 20:11:32,495 - __main__ - INFO - Comparing addresss: Building 7, Unit 2, Room 203, Nature Community, No. 6 Walnut Street, North Second Ring Road, Wuhua District, Kunming City, Yunnan Province and m 203, Nature Community, Nt, North Second Ring Road, Wuhua Disunnnce
+2024-11-05 20:11:32,495 - __main__ - INFO - address comparison result: 0.66%
