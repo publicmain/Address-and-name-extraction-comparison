@@ -37,22 +37,6 @@ This project aims to **automate address verification** (e.g., for new credit car
 
 ---
 
-## System Overview
-
-```text
-+----------------+       +-------------------+       +-------------------+
-|  Client/Front  | --->  |  Flask API (app)  | --->  |  Feishu OCR / AI  |
-|    Endpoints   |       |   /ocr/*          |       |   Translation API |
-+----------------+       +-------------------+       +-------------------+
-                              ^           |
-                              |           v
-                         +-------------+
-                         |  Logging &  |
-                         | Monitoring  |
-                         +-------------+
-
----
-
 ## Quick Start
 
 1. **Install Dependencies**  
