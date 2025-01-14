@@ -115,14 +115,9 @@ This project aims to **automate address verification** (e.g., for new credit car
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](./LICENSE). You are free to use, modify, and distribute under its terms.
-
----
 
 ## Contact
 
-For questions or collaboration, feel free to reach me at `xxx@example.com`, or open an issue in this repository.
+For questions or collaboration, feel free to reach me at `e0893440@u.nus.edu`, or open an issue in this repository.
 
 Thank you for your interest in this project!
